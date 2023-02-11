@@ -8,11 +8,13 @@ validationInput.addEventListener("blur", (event) => {
     event.target.value.length == validationInput.getAttribute("data-length")
   ) {
     validationInput.classList.add("valid");
+    validationInput.classList.remove("invalid");
   }
 
   if (
     event.target.value.length != validationInput.getAttribute("data-length")
   ) {
     validationInput.classList.add("invalid");
+    validationInput.classList.remove("valid");
   }
 });
